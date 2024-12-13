@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Web Page</title>
+    <title>Domain Registration</title>
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
@@ -25,17 +27,22 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Payment</a>
-                </li>
+                </li>   
             </ul>
         </nav>
     </header>
+    
     <main class="form-container">
         <section>
-            <h1 class="title">Checkout</h1>
+            <h1 class="title">Register Your Domain</h1>
         </section>
 
         <section class="form-area">
-            <form id="login-form" method="POST" class="w-100">
+            <form id="register-form" method="POST" class="w-100">
+                <div class="mb-3">
+                    <label for="domain-name" class="form-label">Domain Name</label>
+                    <input type="text" class="form-control" id="domain-name" placeholder="Enter domain name" required>
+                </div>
                 <div class="mb-3">
                     <label for="email" class="form-label">Your Email</label>
                     <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
@@ -44,7 +51,7 @@
                     <label for="password" class="form-label">Your Password</label>
                     <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
                 </div>
-                <button type="submit" class="btn green-button w-100">Log In</button>
+                <button type="submit" class="btn green-button w-100">Register</button>
             </form>
         </section>
     </main>
@@ -53,10 +60,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 
     <script>
-        document.getElementById("login-form").addEventListener("submit", function(event) {
+        document.getElementById("register-form").addEventListener("submit", function(event) {
             event.preventDefault();
-            
-            window.location.href = "https://www.y8.com/search?kind=game&q=snow+rider";
+            alert("Domain registration successful!");
         });
     </script>
 </body>
